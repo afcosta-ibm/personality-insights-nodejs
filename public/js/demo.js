@@ -93,7 +93,7 @@ function renderMarkdown(s) {
 
 $(document).ready(function() {
 
-  var SAMPLE_TEXTS = [ 'sample1', 'sample2', 'sample3', 'ar', 'ja'];
+  var SAMPLE_TEXTS = [ 'empty', 'sample1', 'sample2', 'sample3', 'ar', 'ja'];
   var textCache = {};
 
   globalState.selectedSample = SAMPLE_TEXTS[0];
@@ -694,7 +694,7 @@ $(document).ready(function() {
       updateWordCount();
     } else {
       $Q.get('data/text/' + name + '.txt').then(function(text) {
-        setTextSample(text, true);
+        setTextSample(text, false);
         textCache[name] = text;
       }).then(function() {
         updateWordCount();

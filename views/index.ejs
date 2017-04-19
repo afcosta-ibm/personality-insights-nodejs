@@ -21,24 +21,24 @@
         </a>
         </span>
         <ul class="tab-panels--tab-list" role="tablist">
-          <li class="tab-panels--tab-list-item base--li" role="presentation">
+<!--           <li class="tab-panels--tab-list-item base--li" role="presentation">
             <a class="tab-panels--tab base--a active" href="#twitter-panel" aria-controls="twitter-panel" role="tab">
               <$= __("tab-tweets") $>
             </a>
-          </li>
+          </li> -->
           <li class="tab-panels--tab-list-item base--li" role="presentation">
-            <a class="tab-panels--tab base--a" href="#text-panel" aria-controls="text-panel" role="tab">
+            <a class="tab-panels--tab base--a active" href="#text-panel" aria-controls="text-panel" role="tab">
               <$= __("tab-body") $>
             </a>
           </li>
-          <li class="tab-panels--tab-list-item base--li" style="<% if (showTwitterButton) { %>display: none;<% } %>" role="presentation">
+<!--           <li class="tab-panels--tab-list-item base--li" style="<% if (showTwitterButton) { %>display: none;<% } %>" role="presentation">
             <a class="tab-panels--tab base--a" id="self-analysis-tab" href="#your-twitter-panel" aria-controls="text-panel" role="tab">
               <$= __("tab-twitter") $>
             </a>
-          </li>
+          </li> -->
         </ul>
         <div class="tab-panels--tab-content">
-          <div id="twitter-panel" class="tab-panels--tab-pane active" role="tab-panel">
+<!--           <div id="twitter-panel" class="tab-panels--tab-pane active" role="tab-panel">
             <form class="input--form1">
 
               <div class="base--h5 input--choose">
@@ -73,11 +73,11 @@
                 <button type="submit" class="base--button input--submit-button1"><$= __("button-analyze") $></button>
               </div>
             </form>
-          </div>
-          <div id="text-panel" class="tab-panels--tab-pane" role="tab-panel">
+          </div> -->
+          <div id="text-panel" class="tab-panels--tab-pane active" role="tab-panel">
             <form class="input--form2">
 
-              <div class="base--h5 input--choose">
+              <!-- <div class="base--h5 input--choose">
                 <$= __("option-choose") $>
               </div>
 
@@ -88,11 +88,11 @@
               <label class="base--inline-label input--radio" for="text-sample2"><$= __("text-gandhi-en") $></label>
 
               <input role="radio" class="base--radio" type="radio" id="text-ja" name="text-sample" data-file="ja" data-lang="ja" data-orientation="" />
-              <label class="base--inline-label input--radio" for="text-ja"><$= __("text-natsume-ja") $></label>
+              <label class="base--inline-label input--radio" for="text-ja"><$= __("text-natsume-ja") $></label> -->
 
-              <input role="radio" class="base--radio" type="radio" id="text-custom" name="text-sample" style="display:none" />
+<!--               <input role="radio" class="base--radio" type="radio" id="text-custom" name="text-sample" data-file="empty" data-lang="en"/>
               <label class="base--inline-label input--radio smartphone-hidden" for="text-custom"><$= __("text-own") $></label>
-
+ -->
               <textarea id="inputText" class="base--textarea input--text-area" placeholder="<$= __(" text-placeholder ") $>">
               </textarea>
               <div class="input--button-container">
@@ -115,7 +115,7 @@
 
             </form>
           </div>
-          <div id="your-twitter-panel" class="tab-panels--tab-pane" role="tab-panel">
+          <!-- <div id="your-twitter-panel" class="tab-panels--tab-pane" role="tab-panel">
             <form class="input--form3 auth-form" method='get' action='/auth/twitter'>
               <p class="base--p" style="text-align:center"><button type="submit" class="base--button input--submit-button3"><$= __("button-analyzetwitter") $></button></p>
               <p class="base--p"><strong><$= __("note-title") $></strong>
@@ -130,7 +130,7 @@
               <label class="base--inline-label input--radio" for="my-twitter">
                 <img class="input--thumb" src="/images/no-image.png">@<$= __("label-myself") $></label>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
