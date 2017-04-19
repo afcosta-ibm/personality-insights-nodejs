@@ -1,6 +1,8 @@
 ---
 applications:
-- name: personality-insights-livedemo
+- name: sisrec-pi
+  domain: mybluemix.net
+  host: sisrec-pi
   command: npm start
   path: .
   memory: 512M
